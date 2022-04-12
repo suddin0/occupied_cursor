@@ -6,7 +6,7 @@
 ## Preview
 ![occupied-cursor preview](.res/occupied-cursor.png)
 ## Building
-### You can download the project binary from [here](/releases)
+### You can download the project binary from [here](https://github.com/suddin0/occupied_cursor/releases/)
 1. To build the project you will nead [Maven](https://maven.apache.org/)
    1.1 Download the project from github `git clone https://github.com/suddin0/occupied_cursor`
    1.2 Go to the root of the project `cd occupied_cursor`
