@@ -6,12 +6,13 @@
 
     <groupId>com.occupiedcursor</groupId>
     <artifactId>occupied_cursor</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>occupied_cursor</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.8.1</junit.version>
+        <postFix>${project.version}</postFix>
     </properties>
 
     <dependencies>
@@ -63,17 +64,27 @@
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
+
                 <executions>
                     <execution>
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.occupiedcursor.occupied_cursor/com.occupiedcursor.App
+                                com.occupiedcursor.Main
                             </mainClass>
+
+                            <archive>
+                                <manifest>
+                                    <addClasspath>true</addClasspath>
+                                    <classpathPrefix>lib/</classpathPrefix>
+                                    <mainClass>com.occupiedcursor.Main</mainClass>
+                                </manifest>
+                            </archive>
+
                             <launcher>run</launcher>
                             <compress>2</compress>
-                            <jlinkZipName>occupied-cursor</jlinkZipName>
+                            <jlinkZipName>occupied-cursor_${version}_${os.name}</jlinkZipName>
                             <jlinkImageName>occupied-cursor</jlinkImageName>
                             <noManPages>true</noManPages>
                             <stripDebug>true</stripDebug>
