@@ -190,7 +190,6 @@ public class SimpleView extends VBox {
         AnchorPane.setTopAnchor(timerInputAreaContainer, LABEL_MARGIN_TOP);
         AnchorPane.setRightAnchor(timerType, 0.0);
         AnchorPane.setTopAnchor(timerType, LABEL_MARGIN_TOP);
-        //AnchorPane.setBottomAnchor(timerProgressBar, 0.0);
         AnchorPane.setTopAnchor(timerProgressBar, 113.0);
 
 
@@ -201,7 +200,6 @@ public class SimpleView extends VBox {
 
 
         // 04. the monitor
-
         Image monitorIcon = getImage("monitor-icon.png");
         if(monitorIcon == null) {
             System.err.println("[-] Error : Exiting program due to image loading error. (monitor-icon)");
@@ -229,7 +227,6 @@ public class SimpleView extends VBox {
 
 
         // 05. The speed
-
         Image speedIcon = getImage("speed-icon.png");
         if(speedIcon == null) {
             System.err.println("[-] Error : Exiting program due to image loading error. (speed-icon)");
@@ -240,14 +237,12 @@ public class SimpleView extends VBox {
             speedImageView.setFitWidth(23);
         }
 
-        //VBox.setMargin(speedGroup, new Insets(40 + 53, 0, 0 ,0));
         VBox.setMargin(speedGroup, new Insets(40, 0, 0 ,0));
         speedAreaContainer.setStyle(speedContainerStyles.toString());
         speedAreaContainer.setAlignment(Pos.CENTER_LEFT);
         speedAreaContainer.setSpacing(10);
         speedAreaContainer.getChildren().addAll(speedImageView, speedSlider);
 
-        //speedSlider.setShowTickLabels(true);
 
         AnchorPane.setTopAnchor(speedLabel, 0.0);
         AnchorPane.setLeftAnchor(speedLabel, 0.0);
@@ -259,7 +254,7 @@ public class SimpleView extends VBox {
 
 
 
-        // 06. the start button
+        /* 06. the start button*/
         VBox.setMargin(startButton, new Insets(60, 0, 0 ,0));
         setStartButtonStyles();
 
@@ -267,7 +262,6 @@ public class SimpleView extends VBox {
         this.getChildren().add(header);
 
         /* The following comment shall remain till the << custom >> part is developed */
-        // this.getChildren().add(topButtonGroup);
 
         this.getChildren().add(timerGroup);
         this.getChildren().add(monitorGroup);
@@ -322,7 +316,6 @@ public class SimpleView extends VBox {
         this.viewStyles.add("-fx-background-color", ColorPalette.BACKGROUND);
 
         /* Top button styles */
-        // "-fx-min-width: 200; -fx-min-height: 43; -fx-background-color: #232832; -fx-text-fill: white; -fx-font-size: 18; -fx-font-weight: bold"
         topButtonStyles.add("-fx-min-width", "200");
         topButtonStyles.add("-fx-min-height", "43");
         topButtonStyles.add("-fx-text-fill", ColorPalette.TEXT_ACTIVE);
@@ -378,14 +371,11 @@ public class SimpleView extends VBox {
         monitorComboBox.getStyleClass().add("monitor-combo-box");
 
         /* Speed related */
-        //speedContainerStyles.add("-fx-background-color", ColorPalette.CONTROL_DEFAULT);
-        //speedContainerStyles.add("-fx-background-color", "gray");
         speedContainerStyles.add("-fx-padding", "0 20 0 0");
         speedContainerStyles.add("-fx-min-width", "410");
         speedContainerStyles.add("-fx-max-width", "410");
         speedContainerStyles.add("-fx-min-height", "30");
         speedContainerStyles.add("-fx-max-height", "30");
-        //speedContainerStyles.add("-fx-background-radius", "6");
 
     }
 }
