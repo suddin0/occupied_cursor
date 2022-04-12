@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('fonts/roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'GoodDog';
+    src: url('fonts/GoodDog.otf');
+}
+
+.label {
+    -fx-font-family: 'Roboto-Regular';
+}
+
+.text {
+    -fx-font-family: 'Roboto-Regular';
+}
+
+
+/* Timer progressbar related */
+.timer-progress-bar {
+    -fx-background-color: #2A2F39;
+    -fx-background-insets: 0, 1;
+    -fx-indeterminate-bar-length: 60;
+    -fx-indeterminate-bar-escape: true;
+    -fx-indeterminate-bar-flip: true;
+    -fx-indeterminate-bar-animation-time: 2;
+    -fx-border-radius: 100;
+    -fx-background-radius: 100;
+    -fx-max-height: 5;
+    -fx-min-width: 410;
+}
+
+.timer-progress-bar .bar {
+    -fx-background-color: #0071FF;
+    -fx-background-insets: 0, 1, 2;
+    -fx-padding: 0.416667em; /* 5 */
+}
+
+.timer-progress-bar:indeterminate .bar {
+    -fx-background-color: linear-gradient(to left, transparent, -fx-accent);
+}
+
+.timer-progress-bar .track {
+    -fx-background-color: #2A2F39;
+    -fx-background-insets:  0, 1;
+}
+
+.timer-progress-bar:disabled {
+    /*-fx-opacity: -fx-disabled-opacity;*/
+}
+
+/* Timer ComboBox (dropdown menu) related */
+.timer-combo-box {
+    -fx-background-color: #2A2F39;
+    -fx-min-width: 83;
+    -fx-min-height: 83;
+    -fx-text-fill: #5A5D65;
+    -fx-fill: #5A5D65;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-font-family: 'GoodDog';
+}
+.timer-combo-box .cell{
+    -fx-text-fill: #5A5D65;
+    -fx-fill: #5A5D65;
+    -fx-background-color: #2A2F39;
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-font-family: 'Roboto-Regular';
+}
+
+.timer-combo-box .arrow{
+    -fx-background-color: white;
+}
+
+.timer-combo-box .list-view {
+    -fx-background-color: #2A2F39;
+    -fx-min-height: 83;
+    -fx-text-fill: #5A5D65;
+    -fx-fill: #5A5D65;
+}
+
+/* Monitor ComboBox (dropdown menu) related */
+.monitor-combo-box {
+    -fx-background-color: #2A2F39;
+    -fx-min-width: 355;
+    -fx-min-height: 83;
+    -fx-text-fill: white;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+.monitor-combo-box .cell{
+    -fx-text-fill: white;
+    -fx-background-color: #2A2F39;
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+    -fx-alignment: center;
+    -fx-font-family: 'Roboto-Regular';
+}
+
+.monitor-combo-box .arrow{
+    -fx-background-color: white;
+}
+
+.monitor-combo-box .list-view {
+    -fx-background-color: #2A2F39;
+    -fx-min-height: 83;
+    -fx-text-fill: #5A5D65;
+    -fx-fill: #5A5D65;
+}
+
+.slider {
+    -fx-min-width: 380;
+}
+
+.slider .track {
+    -fx-background-color: #2A2F39;
+}
+
+.slider .thumb {
+    -fx-background-color: #0071FF;
+}
